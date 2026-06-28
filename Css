@@ -1,0 +1,25 @@
+/* Selector de colores circular */
+.color-dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 0;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease;
+}
+
+.color-dot:hover {
+    transform: scale(1.15);
+}
+
+.color-dot.active {
+    border-color: #000 !important;
+}
+
+/* Modificación del tamaño del Modal al 90% */
+@media (min-width: 576px) {
+    .custom-modal-90 {
+        max-width: 90vw !important;
+        width: 90%;
+    }
+}
