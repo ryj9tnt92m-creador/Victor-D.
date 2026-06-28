@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatillas IA SECCIÓN 710</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+
+    <!-- Card de Producto -->
+    <div class="card shadow-lg" style="width: 24rem; border-radius: 15px;">
+        <!-- Imagen del Tenis al Centro -->
+        <div class="text-center p-4 bg-white" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+            <img id="product-img" src="img/blanco.png" class="img-fluid" alt="Zapatillas IA SECCIÓN 710" style="max-height: 220px; object-fit: contain;">
+        </div>
+        
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Zapatillas IA SECCIÓN 710</h5>
+            <p class="text-muted small">Diseño exclusivo con texto en relieve premium.</p>
+            
+            <!-- Selector de Tallas (38, 40, 42) -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold text-secondary small">Talla:</label>
+                <div class="d-flex gap-2">
+                    <input type="radio" class="btn-check" name="talla" id="talla38" checked>
+                    <label class="btn btn-outline-secondary btn-sm px-3" for="talla38">38</label>
+
+                    <input type="radio" class="btn-check" name="talla" id="talla40">
+                    <label class="btn btn-outline-secondary btn-sm px-3" for="talla40">40</label>
+
+                    <input type="radio" class="btn-check" name="talla" id="talla42">
+                    <label class="btn btn-outline-secondary btn-sm px-3" for="talla42">42</label>
+                </div>
+            </div>
+
+            <!-- Selector de Colores -->
+            <div class="mb-4">
+                <label class="form-label fw-semibold text-secondary small">Color:</label>
+                <div class="d-flex gap-2 align-items-center">
+                    <button class="color-dot btn bg-white border shadow-sm active" data-color="blanco" title="Blanco"></button>
+                    <button class="color-dot btn bg-dark" data-color="negro" title="Negro"></button>
+                    <button class="color-dot btn bg-warning" data-color="amarillo" title="Amarillo"></button>
+                    <button class="color-dot btn bg-danger" data-color="rojo" title="Rojo"></button>
+                </div>
+            </div>
+
+            <!-- Precio y Botón COMPRAR -->
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                <span class="fs-4 fw-bold text-dark" id="product-price">$129.99</span>
+                <button class="btn btn-dark fw-bold px-4" data-bs-toggle="modal" data-bs-target="#productModal">COMPRAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Ampliado al 90% (Customizado en CSS) -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-90">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="productModalLabel">Detalle de tu Pedido</h5>
+                    <button type="button" class="btn-close" data-bs-shadow="none" data-bs-focus="none" data-bs-skip="true" data-bs-toggle="modal" data-bs-target="#productModal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img id="modal-img" src="img/blanco.png" class="img-fluid rounded" alt="Vista ampliada">
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="fw-bold mb-3">Zapatillas IA SECCIÓN 710</h2>
+                            <p class="text-muted">Estás a un paso de adquirir un diseño optimizado con tecnología de relieve tridimensional de última generación.</p>
+                            <hr>
+                            <h4 class="text-success fw-bold mb-4">Total a pagar: <span id="modal-price">$129.99</span></h4>
+                            <button class="btn btn-success btn-lg w-100 fw-bold">Confirmar Pago</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lógica JS -->
+    <script src="main.js"></script>
+</body>
+</html>
