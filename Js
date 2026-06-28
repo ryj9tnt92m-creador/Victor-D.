@@ -1,0 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const colorButtons = document.querySelectorAll('.color-dot');
+    const productImg = document.getElementById('product-img');
+    const modalImg = document.getElementById('modal-img');
+
+    colorButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            // Remover estado activo de los otros botones
+            colorButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Añadir estado activo al seleccionado
+            e.target.classList.add('active');
+
+            // Obtener el color seleccionado
+            const selectedColor = e.target.getAttribute('data-color');
+
+            // Cambiar dinámicamente la ruta de la imagen respetando los nombres solicitados en image.png
+            const newImgPath = `img/${selectedColor}.png`;
+            productImg.src = newImgPath;
+            modalImg.src = newImgPath;
+        });
+    });
+});
